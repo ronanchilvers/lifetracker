@@ -8,10 +8,10 @@ jobs:
       fail-fast: true
       matrix:
         operating-system: ['ubuntu-latest']
-        php-versions: ['7.4']
+        php-versions: ['7.4', '8.0']
         experimental: [false]
         include:
-          - php-versions: '8.0'
+          - php-versions: '8.1'
             operating-system: 'ubuntu-latest'
             experimental: true
     name: PHP ${{ matrix.php-versions }}
@@ -42,10 +42,10 @@ jobs:
       run: composer --version
     - name: Composer Dependencies (7.x)
       run: composer install --no-interaction --no-suggest --no-progress --prefer-dist --optimize-autoloader
-      if: matrix.php-versions != '8.0'
+      if: matrix.php-versions == '7.4'
     - name: Composer Dependencies (8.0)
       run: composer install --no-interaction --no-suggest --no-progress --prefer-dist --optimize-autoloader --ignore-platform-reqs
-      if: matrix.php-versions == '8.0'
+      if: matrix.php-versions != '7.4'
     - name: Prepare build directory
       run: |
         [ ! -d build ] && (echo "creating build directory" && mkdir build)
