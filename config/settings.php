@@ -26,8 +26,8 @@ $settings = [
 
     // Database connections
     'database' => [
-        'name'     => 'app.sq3',
-        'dsn'      => 'sqlite:' . __DIR__ . '/../var/database/app.sq3',
+        'name'     => 'app.sqlite3',
+        'dsn'      => 'sqlite:' . __DIR__ . '/../var/database/app.sqlite3',
         'username' => '',
         'password' => '',
         'options'  => [],

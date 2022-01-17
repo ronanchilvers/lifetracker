@@ -77,6 +77,11 @@ class Provider implements ServiceProviderInterface
             // $view->addExtension(
             //     new TwigExtension()
             // );
+            $view->getEnvironment()->addFilter(
+                new \Twig\TwigFilter('pad', function($input, $padlength, $padstring='', $padtype=STR_PAD_LEFT){
+                    return \str_pad($input, $padlength, $padstring, $padtype);
+                })
+            );
 
             return $view;
         });

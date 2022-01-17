@@ -23,7 +23,7 @@ gulp.task('sass', function() {
         .pipe(
             prefix({ cascade: true })
         )
-        .pipe(minify())
+        // .pipe(minify())
         .pipe(gulp.dest('./web/css'))
         .pipe(notify({message: "SASS compilation complete", onLast: true}))
         .on('error', notify.onError())
