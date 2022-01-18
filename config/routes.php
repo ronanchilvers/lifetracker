@@ -10,3 +10,11 @@ $app->get(
     '/',
     IndexController::class . ':index'
 )->setName('index');
+$app->get(
+    '/edit/{id}',
+    IndexController::class . ':edit'
+)->setName('edit');
+$app->get(
+    '/generate',
+    IndexController::class . ':generate'
+)->setName('generate');

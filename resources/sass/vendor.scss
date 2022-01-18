@@ -1,4 +1,9 @@
 // Vendored styles
+
+// Bulma overrides
+$body-size: 18px;
+$section-padding: 1rem 2rem;
+$section-padding-desktop: 2.5rem 2.5rem 0 2.5rem;
+
+// Imports
 @import "bulma/bulma.sass";
-// @import "bulma-extensions/bulma-slider/src/sass/index.sass";
-// @import "bulma-extensions/bulma-switch/src/sass/index.sass";

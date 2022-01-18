@@ -1,13 +1,19 @@
 <?php
 
+use Slim\Views\TwigMiddleware;
 use App\Middleware\BootMiddleware;
 use Ronanchilvers\Sessions\Middleware\Psr15;
-use Slim\Middleware\ErrorMiddleware;
-use Slim\Views\TwigMiddleware;
+use Slim\Handlers\Strategies\RequestResponseArgs;
 // Add middleware here
 // Variables available :
 //   - $container
 //   - $app
+
+// Use alternative route collector strategy
+$routeCollector = $app->getRouteCollector();
+$routeCollector->setDefaultInvocationStrategy(
+    new RequestResponseArgs()
+);
 
 // Twig support
 $app->add(TwigMiddleware::class);

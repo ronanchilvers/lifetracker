@@ -1,0 +1,120 @@
+{% extends 'page.html.twig' %}
+
+{% block body %}
+<div class="section">
+    <div class="columns">
+        <div class="column">
+            <div class="field">
+                <label for="" class="label">Name</label>
+                <div class="control">
+                    <input 
+                        type="text"
+                        class="input"
+                        value="{{ character.name }}">
+                </div>
+            </div>                
+        </div>
+    </div>
+</div>
+<div class="section">
+    <div class="columns">
+        <div class="column">
+            <div class="field is-narrow">
+                <div class="control">
+                    <label 
+                        for="" 
+                        class="label has-text-centered">Str</label>
+                    <input 
+                        type="text"
+                        class="input is-size-3 has-text-centered"
+                        value="{{ character.str }}">
+                </div>
+            </div>
+        </div>
+        <div class="column">
+            <div class="field is-narrow">
+                <div class="control">
+                    <label 
+                        for="" 
+                        class="label has-text-centered">Dex</label>
+                    <input 
+                        type="text"
+                        class="input is-size-3 has-text-centered"
+                        value="{{ character.dex }}">
+                </div>
+            </div>
+        </div>
+        <div class="column">
+            <div class="field is-narrow">
+                <div class="control">
+                    <label 
+                        for="" 
+                        class="label has-text-centered">Con</label>
+                    <input 
+                        type="text"
+                        class="input is-size-3 has-text-centered"
+                        value="{{ character.con }}">
+                </div>
+            </div>
+        </div>
+        <div class="column">
+            <div class="field is-narrow">
+                <div class="control">
+                    <label 
+                        for="" 
+                        class="label has-text-centered">Int</label>
+                    <input 
+                        type="text"
+                        class="input is-size-3 has-text-centered"
+                        value="{{ character.int }}">
+                </div>
+            </div>
+        </div>
+        <div class="column">
+            <div class="field is-narrow">
+                <div class="control">
+                    <label 
+                        for="" 
+                        class="label has-text-centered">Wis</label>
+                    <input 
+                        type="text"
+                        class="input is-size-3 has-text-centered"
+                        value="{{ character.wis }}">
+                </div>
+            </div>
+        </div>
+        <div class="column">
+            <div class="field is-narrow">
+                <div class="control">
+                    <label 
+                        for="" 
+                        class="label has-text-centered">Cha</label>
+                    <input 
+                        type="text"
+                        class="input is-size-3 has-text-centered"
+                        value="{{ character.cha }}">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="section">
+    <div class="field">
+        <label 
+            for="description" 
+            class="label">Description</label>
+        <textarea 
+            id="description" 
+            class="textarea" 
+            placeholder="Write character description here" 
+            rows="6">{{ character.notes }}</textarea>
+    </div>
+</div>
+<div class="section">
+    <div class="buttons is-right">
+        <a href="/" class="button">Cancel</a>
+        <button class="button is-primary">Save</button>
+    </div>
+</div>
+
+{% endblock %}

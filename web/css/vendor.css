@@ -273,7 +273,7 @@ th {
 
 html {
   background-color: white;
-  font-size: 16px;
+  font-size: 18px;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   min-width: 300px;
@@ -7832,10 +7832,10 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
       padding: 3rem 3rem; } }
 
 .section {
-  padding: 3rem 1.5rem; }
+  padding: 1rem 2rem; }
   @media screen and (min-width: 1024px) {
     .section {
-      padding: 3rem 3rem; }
+      padding: 2.5rem 2.5rem 0 2.5rem; }
       .section.is-medium {
         padding: 9rem 4.5rem; }
       .section.is-large {
@@ -7844,19 +7844,3 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
 .footer {
   background-color: #fafafa;
   padding: 3rem 1.5rem 6rem; }
-
-.radio-group input[type=radio] {
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none; }
-
-.radio-group input[type=radio] + input[type=radio] {
-  margin: 0; }
-
-.radio-group label {
-  outline: 1px solid white;
-  display: inline-block;
-  margin: 0;
-  padding: 0.75rem 0.75rem;
-  text-align: center;
-  background: red; }
