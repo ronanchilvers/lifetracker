@@ -15,7 +15,8 @@
         "slim/slim": "^4.0",
         "slim/twig-view": "^3.2",
         "symfony/console": "^3.4",
-        "symfony/yaml": "^4.0"
+        "symfony/yaml": "^4.0",
+        "respect/validation": "^2.2"
     },
     "require-dev": {
         "php-parallel-lint/php-parallel-lint": "^1.3"

@@ -1,0 +1,11 @@
+{% extends 'page.html.twig' %}
+
+{% block body %}
+{% if not character.loaded %}
+<a 
+    href="{{ url_for('characters.generate') }}" 
+    class="button">Generate</a>
+{% endif %}
+{{ include('partials/characters/form.html.twig', { character: character })}}
+
+{% endblock %}

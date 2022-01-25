@@ -2,9 +2,6 @@
 
 {% block body %}
 <div class="section">
-    <a 
-        class="button is-pulled-right" 
-        href="{{ url_for('generate') }}">Generate New Character</a>
     <table class="table is-fullwidth">
         <thead>
             <tr>
@@ -16,10 +13,11 @@
     {% for character in characters %}
             <tr>
                 <td>{{ character.name }}</td>
-                <td><a href="{{ url_for('edit', { id: character.id })}}">Edit</a></td>
+                <td><a href="{{ url_for('characters.edit', { id: character.id })}}">Edit</a></td>
             </tr>
     {% endfor %}
         </tbody>
     </table>
 </div>
+
 {% endblock %}

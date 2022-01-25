@@ -4,12 +4,16 @@ namespace App\Model;
 
 use Ronanchilvers\Orm\Orm;
 use Ronanchilvers\Orm\Model;
+use Respect\Validation\Validator;
+use Ronanchilvers\Orm\Traits\HasValidationTrait;
 
 /**
  * Model representing an NPC
  */
 class Character extends Model
 {
+    use HasValidationTrait;
+
     static protected $columnPrefix = 'character';
 
     static protected $standardArray = [
@@ -20,6 +24,18 @@ class Character extends Model
         10, 
         8
     ];
+
+    /** Validation */
+    public function setupValidation()
+    {
+        $rules = [
+            'name' => Validator::notEmpty(),
+        ];
+        foreach (['str', 'dex', 'con', 'int', 'wis', 'cha'] as $stat) {
+            $rules[$stat] = Validator::notEmpty()->intVal()->min(1)->max(20);
+        }
+        $this->registerRules($rules, 'default');
+    }
 
     /** Utility methods */
 
